@@ -4,7 +4,7 @@ from textblob import TextBlob  # Lightweight for basic sentiment
 
 def process_user_message(text, conversation_id):
     user_lang = detect(text)
-    openai.api_key = os.getenv("OPENAI_API_KEY")
+    openai.api_key = os.getenv("")
     response = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[{"role": "user", "content": text}]
